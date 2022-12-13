@@ -18,3 +18,10 @@ Gio co the upload file bat ky co duoi la `.t1en`(haha.t1en)
 [file signatures](https://en.wikipedia.org/wiki/List_of_file_signatures)
 
 7. chua hieu cach lam
+
+8. Cách phòng ngừa:
+- Sử dụng whitelist tốt hơn blacklist. Đoán extension mình muốn cho phép upload dễ hơn đoán extension mà kẻ xấu muốn upload vì có rất nhiều extension mình không biết
+- File name không được chứa `../` vì có thể gây lỗi path traversal
+- Đổi tên file được upload để tránh việc ghi đè file đã có sẵn
+- Không upload file lên hệ thống file của server ngay, cho đến khi file đó được kiểm tra hoàn toàn
+- Sử dụng framework để xử lý file upload thay vì tự code
